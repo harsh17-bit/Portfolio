@@ -2,7 +2,7 @@
 
 A personal portfolio website built with React and React-Bootstrap.
 
-![Portfolio preview](./Images/readme-img1.png)
+<!-- ![Portfolio preview](./Images/readme-img1.png) -->
 
 ## Overview
 
