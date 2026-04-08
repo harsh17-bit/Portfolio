@@ -36,7 +36,7 @@ function Projects() {
               imgPath={bitsOfCode}
               isBlog={false}
               title="Chat-Bot Cohere"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
+              description="AI-powered chatbot built using Python, LangChain, and Cohere API with a Streamlit interface. Supports real-time, context-aware conversations with memory and scalable deployment for automation and user engagement."
               ghLink="https://github.com/harsh17-bit/langchain_dev"
               demoLink="https://chatbot-cohere.streamlit.app/"
             />
