@@ -1,52 +1,14 @@
-import React from "react";
-import Particles from "react-tsparticles";
+import React from 'react';
 
 function Particle() {
   return (
-    <Particles
+    <div
       id="tsparticles"
-      params={{
-        particles: {
-          number: {
-            value: 160,
-            density: {
-              enable: true,
-              value_area: 1500,
-            },
-          },
-          line_linked: {
-            enable: false,
-            opacity: 0.03,
-          },
-          move: {
-            direction: "right",
-            speed: 0.05,
-          },
-          size: {
-            value: 1,
-          },
-          opacity: {
-            anim: {
-              enable: true,
-              speed: 1,
-              opacity_min: 0.05,
-            },
-          },
-        },
-        interactivity: {
-          events: {
-            onclick: {
-              enable: true,
-              mode: "push",
-            },
-          },
-          modes: {
-            push: {
-              particles_nb: 1,
-            },
-          },
-        },
-        retina_detect: true,
+      aria-hidden="true"
+      style={{
+        backgroundImage:
+          'radial-gradient(circle at 20% 20%, rgba(199,112,240,0.18) 0, transparent 26%), radial-gradient(circle at 80% 30%, rgba(126,87,194,0.14) 0, transparent 24%), radial-gradient(circle at 50% 80%, rgba(255,255,255,0.06) 0, transparent 22%)',
+        pointerEvents: 'none',
       }}
     />
   );
