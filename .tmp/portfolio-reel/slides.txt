@@ -1,0 +1,11 @@
+file 'E:\Portfolio-master\.tmp\portfolio-reel\slide-01.png'
+duration 3.1
+file 'E:\Portfolio-master\.tmp\portfolio-reel\slide-02.png'
+duration 3.1
+file 'E:\Portfolio-master\.tmp\portfolio-reel\slide-03.png'
+duration 3.4
+file 'E:\Portfolio-master\.tmp\portfolio-reel\slide-04.png'
+duration 3
+file 'E:\Portfolio-master\.tmp\portfolio-reel\slide-05.png'
+duration 3
+file 'E:\Portfolio-master\.tmp\portfolio-reel\slide-05.png'

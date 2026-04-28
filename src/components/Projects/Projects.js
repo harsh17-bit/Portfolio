@@ -4,11 +4,132 @@ import ProjectCard from './ProjectCards';
 import Particle from '../Particle';
 import urbanstay from '../../Assets/Projects/urbanstay.png';
 import chatbot from '../../Assets/Projects/chat-bot.png';
+import careerAI from '../../Assets/Projects/career-ai.png';
+import {
+  FaBolt,
+  FaCode,
+  FaGlobe,
+  FaRocket,
+  FaLinkedinIn,
+} from 'react-icons/fa';
+
+const showcaseStats = [
+  { label: 'Visual direction', value: 'Bold + cinematic' },
+  { label: 'Interaction style', value: 'Smooth motion cues' },
+  { label: 'Project focus', value: 'Fast, usable builds' },
+];
+
+const spotlightCards = [
+  {
+    title: 'Interface rhythm',
+    text: 'A strong first impression with layered sections, depth, and clear hierarchy.',
+    icon: <FaCode />,
+  },
+  {
+    title: 'Motion language',
+    text: 'Subtle glow, hover lift, and animated accents to make the portfolio feel alive.',
+    icon: <FaBolt />,
+  },
+  {
+    title: 'Launch ready',
+    text: 'Live project links, responsive layouts, and a design that still reads well on mobile.',
+    icon: <FaRocket />,
+  },
+];
+
+const socialShareLinks = [
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/dte-gecbh-com-harsh-rathod/',
+    icon: <FaLinkedinIn />,
+  },
+  {
+    label: 'Contra',
+    href: 'https://contra.com/',
+    icon: <FaGlobe />,
+  },
+];
+
 function Projects() {
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
+        <Row className="project-hero-shell align-items-center">
+          <Col lg={6} className="project-hero-copy">
+            <p className="project-eyebrow">Portfolio visual reel</p>
+            <h1 className="project-hero-title">
+              One reel that captures your{' '}
+              <strong className="purple">whole</strong> portfolio.
+            </h1>
+            <p className="project-hero-text">
+              This projects section now plays a real MP4 reel built from your
+              portfolio assets, so LinkedIn and Contra viewers can get the full
+              story in one short video before they open individual projects.
+            </p>
+            <div className="project-stat-grid">
+              {showcaseStats.map((stat) => (
+                <div key={stat.label} className="project-stat-card">
+                  <span>{stat.label}</span>
+                  <strong>{stat.value}</strong>
+                </div>
+              ))}
+            </div>
+            <div className="project-social-share">
+              <span>Share or post this portfolio</span>
+              <div className="project-social-share-links">
+                {socialShareLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="project-social-share-link"
+                  >
+                    {link.icon}
+                    <span>{link.label}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </Col>
+
+          <Col lg={6} className="project-hero-visual">
+            <div className="visual-frame">
+              <div className="visual-window">
+                <video
+                  className="portfolio-reel-video"
+                  src={`${process.env.PUBLIC_URL}/portfolio-reel.mp4`}
+                  poster={`${process.env.PUBLIC_URL}/portfolio-reel-poster.png`}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  controls
+                  preload="metadata"
+                >
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div className="visual-caption">
+                A real MP4 reel exported for posting on LinkedIn and Contra.
+              </div>
+            </div>
+          </Col>
+        </Row>
+
+        <Row className="spotlight-row">
+          {spotlightCards.map((card) => (
+            <Col md={4} key={card.title} className="spotlight-col">
+              <div className="spotlight-card">
+                <div className="spotlight-icon">{card.icon}</div>
+                <h3>{card.title}</h3>
+                <p>{card.text}</p>
+              </div>
+            </Col>
+          ))}
+        </Row>
+
         <h1 className="project-heading">
           My Recent <strong className="purple">Works </strong>
         </h1>
@@ -22,7 +143,8 @@ function Projects() {
               isBlog={false}
               title="Urban-Stay"
               description="Find stays, book fast, live.A full-stack web platform for browsing and booking comfortable, affordable accommodations with a smooth and responsive user experience."
-              demoLink="urban-stay-ebrp.onrender.com"
+              ghLink="https://github.com/harsh17-bit/Urban-Stay"
+              demoLink="https://urban-stay-ebrp.onrender.com"
             />
           </Col>
 
@@ -37,16 +159,16 @@ function Projects() {
             />
           </Col>
 
-          {/* <Col md={4} className="project-card">
+          <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={careerAI}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"
+              title="Career.AI"
+              description="Career.AI is a web application that provides personalized career guidance using AI. It offers resume analysis, interview preparation, and job recommendations to help users navigate their career paths effectively."
+              ghLink="https://github.com/harsh17-bit/career-ai"
+              demoLink="https://career-ai-3btq.onrender.com/"
             />
-          </Col> */}
+          </Col>
           {/* 
           <Col md={4} className="project-card">
             <ProjectCard

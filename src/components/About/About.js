@@ -7,6 +7,7 @@ import Techstack from './Techstack';
 import Aboutcard from './AboutCard';
 import laptopImg from '../../Assets/about.png';
 import Toolstack from './Toolstack';
+import AboutTimeline from './AboutTimeline';
 
 function About() {
   return (
@@ -40,6 +41,8 @@ function About() {
           <h1 className="project-heading">
             Professional <strong className="purple">Skillset </strong>
           </h1>
+
+          <AboutTimeline />
 
           <Techstack />
 

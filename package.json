@@ -7,6 +7,7 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.1.3",
+    "ffmpeg-static": "^5.3.0",
     "react": "^17.0.2",
     "react-bootstrap": "^2.2.1",
     "react-dom": "^17.0.2",
@@ -16,6 +17,7 @@
     "react-pdf": "^5.7.1",
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
+    "sharp": "^0.34.5",
     "typewriter-effect": "^2.18.2",
     "web-vitals": "^2.1.4"
   },
@@ -24,6 +26,8 @@
   },
   "scripts": {
     "start": "node scripts/clean-runner.js start",
+    "dev": "node scripts/clean-runner.js start",
+    "reel": "node scripts/generate-portfolio-reel.js",
     "build": "node scripts/clean-runner.js build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
